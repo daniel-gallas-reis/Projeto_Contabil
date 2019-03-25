@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 /**
  * 
- * @author daniel
+ * @author daniel reis
  */
 public class Projeto_Contabil extends Application {
     
