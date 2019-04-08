@@ -9,7 +9,7 @@ package projeto_contabil;
  *
  * @author danie
  */
-public class saude extends entradas_saidas{
+public class alimentacao extends entradas_saidas{
    protected double valor;
    //protected Data data;
    protected Local local;

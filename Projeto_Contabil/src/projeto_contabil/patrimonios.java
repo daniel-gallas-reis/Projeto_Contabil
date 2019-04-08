@@ -9,10 +9,9 @@ package projeto_contabil;
  *
  * @author danie
  */
-public class saude extends entradas_saidas{
+public class patrimonios extends entradas_saidas{
    protected double valor;
-   //protected Data data;
-   protected Local local;
+   protected long nota;
    protected String descricao;
    protected String forma_pagamento;
 }

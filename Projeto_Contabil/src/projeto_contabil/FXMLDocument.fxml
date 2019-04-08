@@ -1,13 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto_contabil.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="painel0" prefHeight="604.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto_contabil.FXMLDocumentController">
+    <stylesheets>
+        <URL value="@fxmllogin.css" />
+    </stylesheets>
+    
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-    </children>
+      <ScrollPane fx:id="painel3" layoutX="-8.0" layoutY="-6.0" prefHeight="616.0" prefWidth="794.0">
+        <content>
+          <AnchorPane fx:id="painel1" minHeight="0.0" minWidth="0.0" prefHeight="62.0" prefWidth="70.0">
+               <children>
+                  <AnchorPane fx:id="painel2" prefHeight="646.0" prefWidth="794.0" style="-fx-background-color: #1d1d1d;">
+                     <children>
+                        <Button fx:id="cliente" layoutX="664.0" layoutY="24.0" mnemonicParsing="false" onAction="#client_button" prefHeight="55.0" prefWidth="94.0" text="Cliente" />
+                        <Button fx:id="financeiro" layoutX="285.0" layoutY="24.0" mnemonicParsing="false" onAction="#finance_button" prefHeight="55.0" prefWidth="126.0" text="Financeiro" textFill="#0404ff" />
+                        <Button fx:id="entradas" layoutX="545.0" layoutY="24.0" mnemonicParsing="false" onAction="#in_button" prefHeight="55.0" prefWidth="108.0" text="Entadas" />
+                        <Button fx:id="saidas" layoutX="425.0" layoutY="24.0" mnemonicParsing="false" onAction="#out_button" prefHeight="55.0" prefWidth="108.0" text="Saídas" />
+                        <Label fx:id="nome_usuario" layoutX="68.0" layoutY="52.0" prefHeight="29.0" prefWidth="199.0" text="Nome do Usuário informado" textFill="#0049f5" />
+                        <Pane layoutX="7.0" layoutY="87.0" prefHeight="525.0" prefWidth="200.0">
+                           <children>
+                              <ComboBox fx:id="ferramentas" layoutX="7.0" layoutY="14.0" onAction="#ferramentas_menu" prefWidth="150.0" promptText="Ferramentas" />
+                              <Label layoutX="7.0" layoutY="496.0" prefHeight="29.0" prefWidth="78.0" text="Hora Sistema" textFill="#0049f5" />
+                              <Label layoutX="7.0" layoutY="475.0" prefHeight="29.0" prefWidth="125.0" text="Data Sistema" textFill="#0049f5" />
+                           </children>
+                        </Pane>
+                        <MenuBar fx:id="barra_arquivo" layoutX="81.0" layoutY="7.0" prefHeight="0.0" prefWidth="174.0">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="File">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Edit">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Help">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                              </items>
+                            </Menu>
+                          </menus>
+                        </MenuBar>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="logo" fitHeight="65.0" fitWidth="80.0" layoutX="4.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logotype-eurodoc-e-print.png" />
+                     </image>
+                  </ImageView>
+                 
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
 </AnchorPane>
