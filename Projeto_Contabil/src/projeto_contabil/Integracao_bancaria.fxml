@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto_contabil.Integracao_bancariaController">
+    <stylesheets>
+        <URL value="@integracao_bancaria.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab style="-fx-background-color: #9eeef7;" text="Integração Bancária">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <Button layoutX="62.0" layoutY="47.0" mnemonicParsing="false" text="Importar OFX" />
+                              <TextArea layoutX="300.0" layoutY="47.0" prefHeight="280.0" prefWidth="266.0" text="Aqui vai aparecer o preview do arquivo .oxf &#10;(nota bancária)" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

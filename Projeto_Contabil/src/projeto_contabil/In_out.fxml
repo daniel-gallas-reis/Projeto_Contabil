@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto_contabil.In_outController">
+    <stylesheets>
+        <URL value="@in_out.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TabPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9eeef7;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab style="-fx-background-color: #9eeef7;" text="Alimentação">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <TextField layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;">
+                                 <font>
+                                    <Font size="4.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@808-24-512.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab style="-fx-background-color: #9eeef7;" text="Diversos">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@design11-512.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab style="-fx-background-color: #9eeef7;" text="Educação">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="355.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Education_User_1-512.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #9eeef7;" text="Entretenimento">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Electric-Guitar-512.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #9eeef7;" text="Saúde">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Cardiovascular-512.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #9eeef7;" text="Seguro">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@office-lock-input-512.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #9eeef7;" text="Vestuário">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@User-Store-512.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #9eeef7;" text="Viagens">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@People-512.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
