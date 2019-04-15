@@ -22,7 +22,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;">
+                              <TextField fx:id="desc_io_aliment" layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;">
                                  <font>
                                     <Font size="4.0" />
                                  </font>
@@ -37,18 +37,19 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <DatePicker fx:id="date_aliment" layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="val_io_aliment" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@808-24-512.png" />
                                  </image>
                               </ImageView>
+                              <Button fx:id="save_aliment" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#aliment_save" text="Salvar" />
                            </children>
                         </AnchorPane>
                   </content>
@@ -57,7 +58,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="val_io_desc" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
@@ -74,12 +75,13 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="desc_io_desc" layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@design11-512.png" />
                                  </image>
                               </ImageView>
+                              <Button fx:id="save_desc" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#desc_save" text="Salvar" />
                            </children>
                         </AnchorPane>
                   </content>
@@ -111,6 +113,7 @@
                                     <Image url="@Education_User_1-512.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
                            </children>
                         </AnchorPane>
                     </content>
@@ -142,6 +145,7 @@
                                     <Image url="@Electric-Guitar-512.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
                            </children></AnchorPane>
                     </content>
                   </Tab>
@@ -172,6 +176,7 @@
                                     <Image url="@Cardiovascular-512.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -203,6 +208,7 @@
                                     <Image url="@office-lock-input-512.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -234,6 +240,7 @@
                                     <Image url="@User-Store-512.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -265,6 +272,7 @@
                                     <Image url="@People-512.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
                            </children>
                         </AnchorPane>
                      </content>
