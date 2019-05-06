@@ -22,7 +22,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField fx:id="desc_io_aliment" layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;">
+                              <TextField fx:id="desc_aliment" layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;">
                                  <font>
                                     <Font size="4.0" />
                                  </font>
@@ -43,13 +43,14 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="val_io_aliment" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="val_aliment" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@808-24-512.png" />
                                  </image>
                               </ImageView>
                               <Button fx:id="save_aliment" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#aliment_save" text="Salvar" />
+                              <ComboBox fx:id="box_alimentacao" layoutX="201.0" layoutY="29.0" prefWidth="150.0" promptText="Clientes" />
                            </children>
                         </AnchorPane>
                   </content>
@@ -58,13 +59,13 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField fx:id="val_io_desc" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="diver_val" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <DatePicker fx:id="date_diverse" layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
@@ -75,13 +76,14 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="desc_io_desc" layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="diver_desc" layoutX="37.0" layoutY="68.0" prefHeight="25.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@design11-512.png" />
                                  </image>
                               </ImageView>
                               <Button fx:id="save_desc" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#desc_save" text="Salvar" />
+                              <ComboBox fx:id="box_diversos" layoutX="201.0" layoutY="29.0" prefWidth="150.0" promptText="Clientes" />
                            </children>
                         </AnchorPane>
                   </content>
@@ -90,13 +92,13 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="edu_val" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <DatePicker fx:id="edu_date" layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="112.0" text="Data" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
@@ -107,13 +109,14 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="edu_desc" layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="355.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Education_User_1-512.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
+                              <Button fx:id="save_edu" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#edu_save" text="Salvar" />
+                              <ComboBox fx:id="box_educacao" layoutX="201.0" layoutY="29.0" prefWidth="150.0" promptText="Clientes" />
                            </children>
                         </AnchorPane>
                     </content>
@@ -122,7 +125,7 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="fun_desc" layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
@@ -133,19 +136,20 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <DatePicker fx:id="fun_date" layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="fun_val" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Electric-Guitar-512.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
+                              <Button fx:id="fun_save" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#save_fun" text="Salvar" />
+                              <ComboBox fx:id="box_ent" layoutX="201.0" layoutY="29.0" prefWidth="150.0" promptText="Clientes" />
                            </children></AnchorPane>
                     </content>
                   </Tab>
@@ -153,7 +157,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="h_desc" layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
@@ -164,19 +168,20 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <DatePicker fx:id="h_date" layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="h_val" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Cardiovascular-512.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
+                              <Button fx:id="h_save" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#save_h" text="Salvar" />
+                              <ComboBox fx:id="box_saude" layoutX="201.0" layoutY="29.0" prefWidth="150.0" promptText="Clientes" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -185,7 +190,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="sec_desc" layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
@@ -196,19 +201,20 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <DatePicker fx:id="sec_date" layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="sec_val" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@office-lock-input-512.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
+                              <Button fx:id="sec_save" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#save_sec" text="Salvar" />
+                              <ComboBox fx:id="box_seguro" layoutX="201.0" layoutY="29.0" prefWidth="150.0" promptText="Clientes" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -217,7 +223,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="vest_desc" layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
@@ -228,19 +234,20 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <DatePicker fx:id="vest_date" layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="vest_val" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@User-Store-512.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
+                              <Button fx:id="vest_save" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#save_vest" text="Salvar" />
+                              <ComboBox fx:id="box_vest" layoutX="201.0" layoutY="29.0" prefWidth="150.0" promptText="Clientes" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -249,7 +256,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <TextField layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="trip_desc" layoutX="37.0" layoutY="68.0" prefWidth="164.0" promptText="Local, etc." style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="36.0" layoutY="41.0" text="Descrição" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
@@ -260,19 +267,20 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <DatePicker layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
+                              <DatePicker fx:id="trip_date" layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="164.0" promptText="Data" style="-fx-background-color: #9eeef7;" />
                               <Label layoutX="37.0" layoutY="192.0" text="Valor" textFill="#259afc">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
+                              <TextField fx:id="trip_val" layoutX="37.0" layoutY="219.0" prefWidth="164.0" style="-fx-background-color: #9eeef7;" />
                               <ImageView fitHeight="268.0" fitWidth="218.0" layoutX="335.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@People-512.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="248.0" layoutY="291.0" mnemonicParsing="false" text="Salvar" />
+                              <Button fx:id="trip_save" layoutX="248.0" layoutY="291.0" mnemonicParsing="false" onAction="#save_trip" text="Salvar" />
+                              <ComboBox fx:id="box_trip" layoutX="201.0" layoutY="29.0" prefWidth="150.0" promptText="Clientes" />
                            </children>
                         </AnchorPane>
                      </content>
