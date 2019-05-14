@@ -21,7 +21,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
                            <children>
-                              <Button layoutX="62.0" layoutY="47.0" mnemonicParsing="false" text="Importar OFX" />
+                              <Button fx:id="ofx" layoutX="62.0" layoutY="47.0" mnemonicParsing="false" onAction="#action_ofx" text="Importar OFX" />
                               <TextArea layoutX="300.0" layoutY="47.0" prefHeight="280.0" prefWidth="266.0" text="Aqui vai aparecer o preview do arquivo .oxf &#10;(nota bancária)" />
                            </children></AnchorPane>
                   </content>

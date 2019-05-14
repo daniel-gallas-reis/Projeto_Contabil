@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="212.0" prefWidth="314.0" style="-fx-background-color: #1d1d1d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto_contabil.FXMLRegisterInController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="288.0">
+         <children>
+            <Pane layoutX="-1.0" prefHeight="212.0" prefWidth="314.0">
+               <children>
+                  <Button fx:id="CreateUser" layoutX="210.0" layoutY="173.0" mnemonicParsing="false" onAction="#FuncaoCreateUser" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #1d1d1d; -fx-border-color: #fff;" text="Create" textFill="#259afc" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="165.0" text="Informe o Nome de Usuario!" textFill="#259afc" />
+                  <Label layoutX="14.0" layoutY="77.0" prefHeight="17.0" prefWidth="165.0" text="Informe sua Senha!" textFill="#259afc" />
+                  <Label layoutX="14.0" layoutY="141.0" prefHeight="17.0" prefWidth="149.0" text="Confirme sua Senha!" textFill="#259afc" />
+                  <TextField fx:id="NewUser" layoutX="14.0" layoutY="31.0" />
+                  <PasswordField fx:id="NewPassword" layoutX="14.0" layoutY="94.0" />
+                  <PasswordField fx:id="Confirm" layoutX="14.0" layoutY="161.0" />
+                  <Button fx:id="Voltar" layoutX="210.0" layoutY="137.0" mnemonicParsing="false" onAction="#FuncaoVoltar" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #1d1d1d; -fx-border-color: #fff;" text="Back!" textFill="#259afc" />
+                  <Label layoutX="14.0" layoutY="56.0" prefHeight="17.0" prefWidth="238.0" text="O nome deve ter no minimo 8 letras" textFill="#259afc" />
+                  <Label layoutX="14.0" layoutY="119.0" prefHeight="17.0" prefWidth="238.0" text="A senha deve ter no mínimo 10 caracteres" textFill="#259afc" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

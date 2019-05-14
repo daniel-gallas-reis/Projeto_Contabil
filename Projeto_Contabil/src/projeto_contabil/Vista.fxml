@@ -64,23 +64,23 @@
                     </rowConstraints>
                      <children>
                          <!-- botones -->
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="62.0" prefWidth="79.0" text="1" textFill="#259afc" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="70.0" prefWidth="79.0" text="2" textFill="#259afc" GridPane.columnIndex="1" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="66.0" prefWidth="80.0" text="3" GridPane.columnIndex="2" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="56.0" prefWidth="79.0" text="4" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="71.0" prefWidth="79.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="60.0" prefWidth="80.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="71.0" prefWidth="79.0" text="7" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="63.0" prefWidth="79.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="59.0" prefWidth="80.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="56.0" prefWidth="79.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Button mnemonicParsing="false" onAction="#borrar" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #fffff;" styleClass="orange" text="C" GridPane.rowIndex="3" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="33.0" prefWidth="98.0" styleClass="operador" text="+" GridPane.columnIndex="3" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="33.0" prefWidth="90.0" styleClass="operador" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="33.0" prefWidth="96.0" styleClass="operador" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="33.0" prefWidth="97.0" styleClass="operador" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="62.0" prefWidth="79.0" style="-fx-background-color: #1d1d1d;" text="1" textFill="#259afc" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="70.0" prefWidth="79.0" style="-fx-background-color: #1d1d1d;" text="2" textFill="#259afc" GridPane.columnIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="66.0" prefWidth="80.0" style="-fx-background-color: #1d1d1d;" text="3" textFill="#259afc" GridPane.columnIndex="2" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="56.0" prefWidth="79.0" style="-fx-background-color: #1d1d1d;" text="4" textFill="#259afc" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: #1d1d1d;" text="5" textFill="#259afc" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #1d1d1d;" text="6" textFill="#259afc" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: #1d1d1d;" text="7" textFill="#259afc" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="63.0" prefWidth="79.0" style="-fx-background-color: #1d1d1d;" text="8" textFill="#259afc" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="59.0" prefWidth="80.0" style="-fx-background-color: #1d1d1d;" text="9" textFill="#259afc" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="56.0" prefWidth="79.0" style="-fx-background-color: #1d1d1d;" text="0" textFill="#259afc" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button mnemonicParsing="false" onAction="#borrar" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #1d1d1d;" styleClass="orange" text="C" textFill="#259afc" GridPane.rowIndex="3" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="33.0" prefWidth="98.0" style="-fx-background-color: #1d1d1d;" styleClass="operador" text="+" textFill="#259afc" GridPane.columnIndex="3" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="33.0" prefWidth="90.0" style="-fx-background-color: #1d1d1d;" styleClass="operador" text="-" textFill="#259afc" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: #1d1d1d;" styleClass="operador" text="*" textFill="#259afc" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" onAction="#otroBoton" prefHeight="33.0" prefWidth="97.0" style="-fx-background-color: #1d1d1d;" styleClass="operador" text="/" textFill="#259afc" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                         <!-- simbolo Igual -->
-                        <Button mnemonicParsing="false" onAction="#evaluar" prefHeight="33.0" prefWidth="96.0" styleClass="orange" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Button mnemonicParsing="false" onAction="#evaluar" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: #1d1d1d;" styleClass="orange" text="=" textFill="#259afc" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                </children>

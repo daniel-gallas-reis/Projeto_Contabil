@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto_contabil.PatrimonioController">
+    <stylesheets>
+        <URL value="@patrimonio.css" />
+    </stylesheets>
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #9eeef7;" text="Parimônio">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;">
+                     <children>
+                        <Label layoutX="8.0" layoutY="3.0" prefHeight="58.0" prefWidth="351.0" text="Patrimônio Total Acumulado">
+                           <font>
+                              <Font size="21.0" />
+                           </font></Label>
+                        <Button fx:id="add_pat" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" onAction="#button_add_pat" prefHeight="67.0" prefWidth="164.0" text="Adicionar &#10;Novo Patrimônio" />
+                        <TextField fx:id="text_pat" layoutX="209.0" layoutY="55.0" prefHeight="23.0" prefWidth="117.0" promptText="Digite aqui" />
+                        <ComboBox fx:id="client_box1" layoutX="14.0" layoutY="61.0" prefWidth="150.0" promptText="Clientes" />
+                        <Button fx:id="add_sal1" layoutX="14.0" layoutY="193.0" mnemonicParsing="false" onAction="#button_add_sal" prefHeight="67.0" prefWidth="164.0" text="Adicionar &#10;Novo Salário" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,8 +1,9 @@
-package fxmltableview;
+package projeto_contabil;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -63,37 +64,19 @@ public class FXMLTableViewController implements Initializable {
             email.setText("");
         }
     }
-
-    @FXML
-    public void editPerson(ActionEvent e) {
-        Person p = tableView.getSelectionModel().getSelectedItem();
-        remove_person(p);
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml_editar.fxml"));
-            Parent root = loader.load();
-            Fxml_editarController controlador = loader.getController();
-
-            Scene scene = new Scene(root);
-            Stage stage1 = new Stage();
-
-            controlador.setPerson(p);
-            controlador.setMainController(FXMLTableViewController.this);
-            stage1.setTitle("Edit Person");
-            stage1.setScene(scene);
-            stage1.setAlwaysOnTop(true);
-            stage1.show();
-            tableView.getScene().getWindow().hide();
-        } catch (IOException ex) {
-            System.err.println("Erro ao abrir Janela de Edição");
-        }
-    }
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
-        data = tableView.getItems();
+        data = FXCollections.observableArrayList();
+        
+        data.add(new Person("João", "da Silva", "silva@gmail.com"));
+     
+        //   data = tableView.getItems();
 
+        tableView.setItems(data);
+        
         tableView.setOnMouseClicked(e -> {
             Person pessoa_selecionada = tableView.getSelectionModel().getSelectedItem();
 

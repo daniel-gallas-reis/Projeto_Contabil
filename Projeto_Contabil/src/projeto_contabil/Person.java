@@ -1,4 +1,4 @@
-package fxmltableview;
+package projeto_contabil;
 
 import javafx.beans.property.SimpleStringProperty;
 

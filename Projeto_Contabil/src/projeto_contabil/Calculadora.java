@@ -24,7 +24,7 @@
  *
  */
 
-package calculadora;
+package projeto_contabil;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -43,6 +43,7 @@ public class Calculadora extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Vista.fxml"));
         Scene scene = new Scene(root);       
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

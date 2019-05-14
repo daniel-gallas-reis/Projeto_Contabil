@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320.0" style="-fx-background-color: #1d1d1d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto_contabil.FXML_LoginController">
+    <children>
+      <Pane layoutX="-2.0" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #1d1d1d;">
+         <children>
+            <Label layoutX="29.0" layoutY="40.0" text="User:" textFill="#259afc" />
+            <Label layoutX="28.0" layoutY="70.0" text="Pasaword:" textFill="#259afc" />
+         </children></Pane>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button layoutX="243.0" layoutY="152.0" mnemonicParsing="false" onAction="#FuncaoCheck" style="-fx-background-color: #1d1d1d; -fx-border-color: #fff;" text="Check!" textFill="#259afc" />
+      <TextField fx:id="User" layoutX="94.0" layoutY="35.0" promptText="login" />
+      <PasswordField fx:id="Password" layoutX="94.0" layoutY="63.0" promptText="senha" />
+    </children>
+</AnchorPane>

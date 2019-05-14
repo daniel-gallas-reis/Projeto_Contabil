@@ -5,10 +5,7 @@
  */
 package projeto_contabil;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -20,8 +17,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextInputDialog;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -49,12 +44,13 @@ public class DateController implements Initializable {
     private void press_lembrete(ActionEvent e) throws IOException {
     
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml_tableview.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Fxml_tableview.fxml"));
             Parent root = loader.load();
 
             Scene scene = new Scene(root);
             Stage stage1 = new Stage();
             stage1.setScene(scene);
+            stage1.setTitle("Lembretes");
             stage1.show();
         } catch (IOException ex) {
             System.err.println("Erro ao abrir janela!");

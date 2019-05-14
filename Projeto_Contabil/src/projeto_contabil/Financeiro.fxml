@@ -27,15 +27,9 @@
                                     <Font name="System Bold" size="24.0" />
                                  </font>
                               </Text>
-                              <PieChart layoutX="34.0" layoutY="99.0" prefHeight="180.0" prefWidth="235.0" />
-                              <BarChart layoutX="308.0" layoutY="80.0" prefHeight="218.0" prefWidth="285.0">
-                                <xAxis>
-                                  <CategoryAxis side="BOTTOM" />
-                                </xAxis>
-                                <yAxis>
-                                  <NumberAxis side="LEFT" />
-                                </yAxis>
-                              </BarChart>
+                              <PieChart fx:id="grafpizza" layoutX="8.0" layoutY="44.0" prefHeight="325.0" prefWidth="425.0" style="-fx-background-color: #259afc;" />
+                              <ComboBox fx:id="client_box1" layoutX="443.0" layoutY="46.0" prefWidth="150.0" promptText="Clientes" />
+                              <Button fx:id="gerar" layoutX="459.0" layoutY="83.0" mnemonicParsing="false" onAction="#action_gerar" text="Gerar Gráfico" />
                            </children>
                         </AnchorPane>
                   </content>
