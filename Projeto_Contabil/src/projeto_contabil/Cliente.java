@@ -107,9 +107,6 @@ public class Cliente implements Serializable{
             return false;
         }
         final Cliente other = (Cliente) obj;
-        if (!Objects.equals(this.nome, other.nome)) {
-            return false;
-        }
         if (!Objects.equals(this.cpf, other.cpf)) {
             return false;
         }

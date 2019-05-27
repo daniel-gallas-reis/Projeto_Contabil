@@ -49,10 +49,10 @@ public class FinanceiroController implements Initializable {
             ArrayList<Saida> saidas = ler_arquivo_binario("saidas.bin");
 
             grafpizza.setTitle(cli.getNome());
-            grafpizza.getData().add(new PieChart.Data("Saldo R$" + cli.saldo, Double.parseDouble(cli.getSaldo())));
+            grafpizza.getData().add(new PieChart.Data("Saldo" + System.lineSeparator() + "R$" + cli.saldo, Double.parseDouble(cli.getSaldo())));
             for (Saida saida : saidas) {
                 if (saida.getCliente().equals(cli)) {
-                    grafpizza.getData().add(new PieChart.Data(saida.getTipo() + " R$" + saida.getValor(), saida.getValor()));
+                    grafpizza.getData().add(new PieChart.Data(saida.getTipo() + System.lineSeparator() + " R$" + saida.getValor(), saida.getValor()));
                 }
 
             }

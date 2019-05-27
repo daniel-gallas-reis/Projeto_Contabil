@@ -42,10 +42,11 @@ public class ClientController implements Initializable {
     TextArea area;
 
     @FXML
-    TextField client_nome, client_idade, client_saldo, client_salario, client_cpf;
+    TextField client_nome, client_idade, client_saldo, client_salario,
+            client_cpf, edit_name, edit_age, edit_money, edit_salary;
 
     @FXML
-    private ComboBox<Cliente> client_box, client_box1;
+    private ComboBox<Cliente> client_box, client_box1, box_cliente_edit;
     private ObservableList<Cliente> cliente_box = FXCollections.observableArrayList();
     private ArrayList<Saida> saidas;
 
@@ -139,6 +140,83 @@ public class ClientController implements Initializable {
 
     }
 
+    @FXML
+    private void altsave(ActionEvent e) throws IOException {
+
+        if (box_cliente_edit.getSelectionModel().getSelectedItem() == null) {
+            Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
+            dialogoErro.setTitle("ERROR!");
+            dialogoErro.setHeaderText("Erro na seleção do cliente...");
+            dialogoErro.setContentText("Favor selecionar um cliente para continuar!");
+            dialogoErro.showAndWait();
+        } else {
+            String name = edit_name.getText();
+            String age = edit_age.getText();
+            String money = edit_money.getText();
+            String salary = edit_salary.getText();
+
+            boolean erro_atualizacao_patrimonio = true;
+
+            File f = new File("Cliente.txt");
+
+            f.delete();
+            f.createNewFile();
+            for (Cliente cliente : cliente_box) {
+                if (cliente.equals(box_cliente_edit.getSelectionModel().getSelectedItem())) {
+                    if(!name.isEmpty()){
+                    cliente.setNome(name);
+                    }
+                    if(!age.isEmpty()){
+                    cliente.setIdade(age);
+                    }
+                    if(!money.isEmpty()){
+                    cliente.setSaldo(money);
+                    }
+                    if(!salary.isEmpty()){
+                    cliente.setSalario(salary);
+                    }
+                }
+                String texto = cliente.proArquivo();
+
+                boolean x = Auxiliar.escrever_arquivo(texto, "Cliente.txt", true);
+
+                if (x == false) {
+                    erro_atualizacao_patrimonio = false;
+                }
+                for (Saida saida : saidas) {
+                    if (saida.getCliente().equals(cliente)) {
+                        saida.setCliente(cliente);
+                    }
+                }
+            }
+            Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false);
+
+            if (!erro_atualizacao_patrimonio) {
+                Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+                dialogoInfo.setTitle("ATENÇÃO");
+                dialogoInfo.setHeaderText("Alteração em Clientes");
+                dialogoInfo.setContentText("Cliente não atualizado com sucesso!");
+                dialogoInfo.showAndWait();
+                edit_name.setText("");
+                edit_age.setText("");
+                edit_money.setText("");
+                edit_salary.setText("");
+
+            } else {
+                Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+                dialogoInfo.setTitle("ATENÇÃO");
+                dialogoInfo.setHeaderText("Alteração em Clientes");
+                dialogoInfo.setContentText("Cliente atualizado com sucesso!");
+                dialogoInfo.showAndWait();
+                edit_name.setText("");
+                edit_age.setText("");
+                edit_money.setText("");
+                edit_salary.setText("");
+            }
+        }
+
+    }
+
     /**
      * Initializes the controller class.
      */
@@ -158,6 +236,7 @@ public class ClientController implements Initializable {
 
         client_box.setItems(cliente_box);
         client_box1.setItems(cliente_box);
+        box_cliente_edit.setItems(cliente_box);
     }
 
 }

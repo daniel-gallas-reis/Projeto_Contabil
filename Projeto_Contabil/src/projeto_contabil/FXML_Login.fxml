@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.paint.*?>
 <?import java.lang.*?>
@@ -10,14 +11,23 @@
 
 <AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320.0" style="-fx-background-color: #1d1d1d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto_contabil.FXML_LoginController">
     <children>
-      <Pane layoutX="-2.0" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #1d1d1d;">
+      <Pane layoutX="-7.0" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #1d1d1d;">
          <children>
-            <Label layoutX="29.0" layoutY="40.0" text="User:" textFill="#259afc" />
-            <Label layoutX="28.0" layoutY="70.0" text="Pasaword:" textFill="#259afc" />
+            <Label layoutX="60.0" layoutY="79.0" text="User:" textFill="#259afc" />
+            <Label layoutX="60.0" layoutY="119.0" text="Pasaword:" textFill="#259afc" />
+            <TextField fx:id="User" layoutX="127.0" layoutY="75.0" promptText="login" />
+            <PasswordField fx:id="Password" layoutX="127.0" layoutY="115.0" promptText="senha" />
+            <Pane layoutY="2.0" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: #259afc;">
+               <children>
+                  <ImageView fitHeight="74.0" fitWidth="99.0" layoutX="-2.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@11-User-Password-512.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+              <Label fx:id="label" layoutX="101.0" layoutY="14.0" minHeight="16" minWidth="69" />
          </children></Pane>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <Button layoutX="243.0" layoutY="152.0" mnemonicParsing="false" onAction="#FuncaoCheck" style="-fx-background-color: #1d1d1d; -fx-border-color: #fff;" text="Check!" textFill="#259afc" />
-      <TextField fx:id="User" layoutX="94.0" layoutY="35.0" promptText="login" />
-      <PasswordField fx:id="Password" layoutX="94.0" layoutY="63.0" promptText="senha" />
     </children>
 </AnchorPane>

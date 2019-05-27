@@ -5,6 +5,8 @@
  */
 package projeto_contabil;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -43,7 +45,7 @@ public class In_outController implements Initializable {
     String que = "Clientes";
 
     @FXML
-    private void aliment_save(ActionEvent e) {
+    private void aliment_save(ActionEvent e) throws IOException {
         if (box_alimentacao.getSelectionModel().getSelectedItem() == null) {
             Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
             dialogoErro.setTitle("ERROR!");
@@ -58,8 +60,31 @@ public class In_outController implements Initializable {
 
             saidas.add(new Saida("Alimentação", cli, desc, date, val));
             Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false);
+            
+            String pat = val_aliment.getText(); 
 
-            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false)) {
+            boolean erro_atualizacao_patrimonio = true;
+
+            File f = new File("Cliente.txt");
+
+            f.delete();
+            f.createNewFile();
+            for (Cliente cliente : cliente_box) {
+                if (cliente.equals(box_alimentacao.getSelectionModel().getSelectedItem())) {
+                    cliente.setSaldo(String.valueOf(Float.parseFloat(cliente.getSaldo()) - Float.parseFloat(pat)));
+                }
+                String texto = cliente.proArquivo();
+
+                boolean x = Auxiliar.escrever_arquivo(texto, "Cliente.txt", true);
+
+                if (x == false) {
+                    erro_atualizacao_patrimonio = false;
+                }
+            }
+
+            
+
+            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false) && erro_atualizacao_patrimonio) {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("ATENÇÃO");
                 dialogoInfo.setHeaderText("Cadastro");
@@ -75,12 +100,12 @@ public class In_outController implements Initializable {
                 dialogoInfo.showAndWait();
                 desc_aliment.setText("");
                 val_aliment.setText("");
-            }
+            }            
         }
     }
 
     @FXML
-    private void desc_save(ActionEvent e) {
+    private void desc_save(ActionEvent e) throws IOException {
         if (box_diversos.getSelectionModel().getSelectedItem() == null) {
             Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
             dialogoErro.setTitle("ERROR!");
@@ -95,8 +120,29 @@ public class In_outController implements Initializable {
 
             saidas.add(new Saida("Diversos", cli, desc, date, val));
             Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false);
+            
+            String pat = diver_val.getText(); 
 
-            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false)) {
+            boolean erro_atualizacao_patrimonio = true;
+
+            File f = new File("Cliente.txt");
+
+            f.delete();
+            f.createNewFile();
+            for (Cliente cliente : cliente_box) {
+                if (cliente.equals(box_diversos.getSelectionModel().getSelectedItem())) {
+                    cliente.setSaldo(String.valueOf(Float.parseFloat(cliente.getSaldo()) - Float.parseFloat(pat)));
+                }
+                String texto = cliente.proArquivo();
+
+                boolean x = Auxiliar.escrever_arquivo(texto, "Cliente.txt", true);
+
+                if (x == false) {
+                    erro_atualizacao_patrimonio = false;
+                }
+            }
+
+            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false) && erro_atualizacao_patrimonio) {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("ATENÇÃO");
                 dialogoInfo.setHeaderText("Cadastro");
@@ -118,7 +164,7 @@ public class In_outController implements Initializable {
     }
 
     @FXML
-    private void edu_save(ActionEvent e) {
+    private void edu_save(ActionEvent e) throws IOException {
         if (box_educacao.getSelectionModel().getSelectedItem() == null) {
             Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
             dialogoErro.setTitle("ERROR!");
@@ -133,7 +179,29 @@ public class In_outController implements Initializable {
 
             saidas.add(new Saida("Educação", cli, desc, date, val));
             Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false);
-            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false)) {
+            
+            String pat = edu_val.getText(); 
+
+            boolean erro_atualizacao_patrimonio = true;
+
+            File f = new File("Cliente.txt");
+
+            f.delete();
+            f.createNewFile();
+            for (Cliente cliente : cliente_box) {
+                if (cliente.equals(box_educacao.getSelectionModel().getSelectedItem())) {
+                    cliente.setSaldo(String.valueOf(Float.parseFloat(cliente.getSaldo()) - Float.parseFloat(pat)));
+                }
+                String texto = cliente.proArquivo();
+
+                boolean x = Auxiliar.escrever_arquivo(texto, "Cliente.txt", true);
+
+                if (x == false) {
+                    erro_atualizacao_patrimonio = false;
+                }
+            }
+            
+            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false) && erro_atualizacao_patrimonio) {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("ATENÇÃO");
                 dialogoInfo.setHeaderText("Cadastro");
@@ -154,7 +222,7 @@ public class In_outController implements Initializable {
     }
 
     @FXML
-    private void save_fun(ActionEvent e) {
+    private void save_fun(ActionEvent e) throws IOException {
         if (box_ent.getSelectionModel().getSelectedItem() == null) {
             Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
             dialogoErro.setTitle("ERROR!");
@@ -169,7 +237,29 @@ public class In_outController implements Initializable {
 
             saidas.add(new Saida("Entretenimento", cli, desc, date, val));
             Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false);
-            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false)) {
+            
+            String pat = fun_val.getText(); 
+
+            boolean erro_atualizacao_patrimonio = true;
+
+            File f = new File("Cliente.txt");
+
+            f.delete();
+            f.createNewFile();
+            for (Cliente cliente : cliente_box) {
+                if (cliente.equals(box_ent.getSelectionModel().getSelectedItem())) {
+                    cliente.setSaldo(String.valueOf(Float.parseFloat(cliente.getSaldo()) - Float.parseFloat(pat)));
+                }
+                String texto = cliente.proArquivo();
+
+                boolean x = Auxiliar.escrever_arquivo(texto, "Cliente.txt", true);
+
+                if (x == false) {
+                    erro_atualizacao_patrimonio = false;
+                }
+            }
+            
+            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false) && erro_atualizacao_patrimonio) {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("ATENÇÃO");
                 dialogoInfo.setHeaderText("Cadastro");
@@ -190,7 +280,7 @@ public class In_outController implements Initializable {
     }
 
     @FXML
-    private void save_h(ActionEvent e) {
+    private void save_h(ActionEvent e) throws IOException {
         if (box_saude.getSelectionModel().getSelectedItem() == null) {
             Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
             dialogoErro.setTitle("ERROR!");
@@ -205,7 +295,29 @@ public class In_outController implements Initializable {
 
             saidas.add(new Saida("Saúde", cli, desc, date, val));
             Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false);
-            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false)) {
+            
+            String pat = h_val.getText(); 
+
+            boolean erro_atualizacao_patrimonio = true;
+
+            File f = new File("Cliente.txt");
+
+            f.delete();
+            f.createNewFile();
+            for (Cliente cliente : cliente_box) {
+                if (cliente.equals(box_saude.getSelectionModel().getSelectedItem())) {
+                    cliente.setSaldo(String.valueOf(Float.parseFloat(cliente.getSaldo()) - Float.parseFloat(pat)));
+                }
+                String texto = cliente.proArquivo();
+
+                boolean x = Auxiliar.escrever_arquivo(texto, "Cliente.txt", true);
+
+                if (x == false) {
+                    erro_atualizacao_patrimonio = false;
+                }
+            }
+            
+            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false) && erro_atualizacao_patrimonio) {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("ATENÇÃO");
                 dialogoInfo.setHeaderText("Cadastro");
@@ -226,7 +338,7 @@ public class In_outController implements Initializable {
     }
 
     @FXML
-    private void save_sec(ActionEvent e) {
+    private void save_sec(ActionEvent e) throws IOException {
         if (box_seguro.getSelectionModel().getSelectedItem() == null) {
             Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
             dialogoErro.setTitle("ERROR!");
@@ -241,7 +353,29 @@ public class In_outController implements Initializable {
 
             saidas.add(new Saida("Seguro", cli, desc, date, val));
             Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false);
-            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false)) {
+            
+            String pat = sec_val.getText(); 
+
+            boolean erro_atualizacao_patrimonio = true;
+
+            File f = new File("Cliente.txt");
+
+            f.delete();
+            f.createNewFile();
+            for (Cliente cliente : cliente_box) {
+                if (cliente.equals(box_seguro.getSelectionModel().getSelectedItem())) {
+                    cliente.setSaldo(String.valueOf(Float.parseFloat(cliente.getSaldo()) - Float.parseFloat(pat)));
+                }
+                String texto = cliente.proArquivo();
+
+                boolean x = Auxiliar.escrever_arquivo(texto, "Cliente.txt", true);
+
+                if (x == false) {
+                    erro_atualizacao_patrimonio = false;
+                }
+            }
+            
+            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false) && erro_atualizacao_patrimonio) {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("ATENÇÃO");
                 dialogoInfo.setHeaderText("Cadastro");
@@ -262,7 +396,7 @@ public class In_outController implements Initializable {
     }
 
     @FXML
-    private void save_vest(ActionEvent e) {
+    private void save_vest(ActionEvent e) throws IOException {
         if (box_vest.getSelectionModel().getSelectedItem() == null) {
             Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
             dialogoErro.setTitle("ERROR!");
@@ -277,7 +411,29 @@ public class In_outController implements Initializable {
 
             saidas.add(new Saida("Vestuário", cli, desc, date, val));
             Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false);
-            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false)) {
+            
+            String pat = vest_val.getText(); 
+
+            boolean erro_atualizacao_patrimonio = true;
+
+            File f = new File("Cliente.txt");
+
+            f.delete();
+            f.createNewFile();
+            for (Cliente cliente : cliente_box) {
+                if (cliente.equals(box_vest.getSelectionModel().getSelectedItem())) {
+                    cliente.setSaldo(String.valueOf(Float.parseFloat(cliente.getSaldo()) - Float.parseFloat(pat)));
+                }
+                String texto = cliente.proArquivo();
+
+                boolean x = Auxiliar.escrever_arquivo(texto, "Cliente.txt", true);
+
+                if (x == false) {
+                    erro_atualizacao_patrimonio = false;
+                }
+            }
+            
+            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false) && erro_atualizacao_patrimonio) {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("ATENÇÃO");
                 dialogoInfo.setHeaderText("Cadastro");
@@ -298,7 +454,7 @@ public class In_outController implements Initializable {
     }
 
     @FXML
-    private void save_trip(ActionEvent e) {
+    private void save_trip(ActionEvent e) throws IOException {
         if (box_trip.getSelectionModel().getSelectedItem() == null) {
             Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
             dialogoErro.setTitle("ERROR!");
@@ -313,7 +469,29 @@ public class In_outController implements Initializable {
 
             saidas.add(new Saida("Viagens", cli, desc, date, val));
             Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false);
-            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false)) {
+            
+            String pat = trip_val.getText(); 
+
+            boolean erro_atualizacao_patrimonio = true;
+
+            File f = new File("Cliente.txt");
+
+            f.delete();
+            f.createNewFile();
+            for (Cliente cliente : cliente_box) {
+                if (cliente.equals(box_trip.getSelectionModel().getSelectedItem())) {
+                    cliente.setSaldo(String.valueOf(Float.parseFloat(cliente.getSaldo()) - Float.parseFloat(pat)));
+                }
+                String texto = cliente.proArquivo();
+
+                boolean x = Auxiliar.escrever_arquivo(texto, "Cliente.txt", true);
+
+                if (x == false) {
+                    erro_atualizacao_patrimonio = false;
+                }
+            }
+            
+            if (Auxiliar.escrever_arquivo_binario(saidas, "saidas.bin", false) && erro_atualizacao_patrimonio) {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("ATENÇÃO");
                 dialogoInfo.setHeaderText("Cadastro");

@@ -123,9 +123,10 @@ public class FXML_LoginController implements Initializable {
                     stage.setScene(scene);
                     //stage.setFullScreen(true);
                     stage.setResizable(true);
-                    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-                    stage.setHeight(screenSize.getHeight() - 30);
-                    stage.setWidth(screenSize.getWidth() - 30);
+//                    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//                    stage.setHeight(screenSize.getHeight() - 30);
+//                    stage.setWidth(screenSize.getWidth() - 30);
+                    stage.setMaximized(true);
                     FXMLDocumentController control = loader.getController();
 
                     control.setUser(b);
@@ -134,7 +135,6 @@ public class FXML_LoginController implements Initializable {
                         control.painel0.setPrefWidth(newSceneWidth.doubleValue());
                         control.painel1.setPrefWidth(newSceneWidth.doubleValue());
                         control.painel2.setPrefWidth(newSceneWidth.doubleValue());
-                        control.painel3.setPrefWidth(newSceneWidth.doubleValue());
                         System.out.println("Width: " + newSceneWidth);
                     });
                     scene.heightProperty().addListener((ObservableValue<? extends Number> observableValue, Number oldSceneHeight, Number newSceneHeight) -> {
@@ -142,7 +142,6 @@ public class FXML_LoginController implements Initializable {
                         control.painel0.setPrefHeight(newSceneHeight.doubleValue());
                         control.painel1.setPrefHeight(newSceneHeight.doubleValue());
                         control.painel2.setPrefHeight(newSceneHeight.doubleValue());
-                        control.painel3.setPrefHeight(newSceneHeight.doubleValue());
 
                     });
                     stage.setTitle("Engenharia Contábil");
